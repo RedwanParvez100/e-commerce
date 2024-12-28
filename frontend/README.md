@@ -1,3 +1,4 @@
+# EverNest : A place where everything you need is always available, like a trusted nest.
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
