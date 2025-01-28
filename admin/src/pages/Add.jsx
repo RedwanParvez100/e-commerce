@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
+import axios from "axios";
+import { backendUrl } from "../App";
 
-const Add = () => {
+const Add = ({ token }) => {
     const [image1, setImage1] = useState(false);
     const [image2, setImage2] = useState(false);
     const [image3, setImage3] = useState(false);
@@ -15,8 +17,40 @@ const Add = () => {
     const [bestseller, setBestseller] = useState(false);
     const [sizes, setSizes] = useState([]);
 
+    const onSubmitHandler = async (e) => {
+        e.preventDefault();
+
+        try {
+            const formData = new FormData();
+
+            formData.append("name", name);
+            formData.append("description", description);
+            formData.append("price", price);
+            formData.append("category", category);
+            formData.append("subCategory", subCategory);
+            formData.append("bestseller", bestseller);
+            formData.append("sizes", JSON.stringify(sizes));
+
+            image1 && formData.append("image1", image1);
+            image2 && formData.append("image2", image2);
+            image3 && formData.append("image3", image3);
+            image4 && formData.append("image4", image4);
+
+            const response = await axios.post(
+                backendUrl + "/api/product/add",
+                formData,
+                { headers: { token } }
+            );
+
+            console.log(response.data);
+        } catch (error) {}
+    };
+
     return (
-        <form className="flex flex-col w-full items-start gap-3">
+        <form
+            onSubmit={onSubmitHandler}
+            className="flex flex-col w-full items-start gap-3"
+        >
             <div>
                 <p className="mb-3">Upload Image</p>
 
@@ -169,7 +203,13 @@ const Add = () => {
                             )
                         }
                     >
-                        <p className="bg-slate-200 px-3 py-1 cursor-pointer">
+                        <p
+                            className={`${
+                                sizes.includes("S")
+                                    ? "bg-pink-100"
+                                    : "bg-slate-200"
+                            } px-3 py-1 cursor-pointer`}
+                        >
                             S
                         </p>
                     </div>
@@ -182,7 +222,13 @@ const Add = () => {
                             )
                         }
                     >
-                        <p className="bg-slate-200 px-3 py-1 cursor-pointer">
+                        <p
+                            className={`${
+                                sizes.includes("M")
+                                    ? "bg-pink-100"
+                                    : "bg-slate-200"
+                            } px-3 py-1 cursor-pointer`}
+                        >
                             M
                         </p>
                     </div>
@@ -195,7 +241,13 @@ const Add = () => {
                             )
                         }
                     >
-                        <p className="bg-slate-200 px-3 py-1 cursor-pointer">
+                        <p
+                            className={`${
+                                sizes.includes("L")
+                                    ? "bg-pink-100"
+                                    : "bg-slate-200"
+                            } px-3 py-1 cursor-pointer`}
+                        >
                             L
                         </p>
                     </div>
@@ -208,7 +260,13 @@ const Add = () => {
                             )
                         }
                     >
-                        <p className="bg-slate-200 px-3 py-1 cursor-pointer">
+                        <p
+                            className={`${
+                                sizes.includes("XL")
+                                    ? "bg-pink-100"
+                                    : "bg-slate-200"
+                            } px-3 py-1 cursor-pointer`}
+                        >
                             XL
                         </p>
                     </div>
@@ -221,7 +279,13 @@ const Add = () => {
                             )
                         }
                     >
-                        <p className="bg-slate-200 px-3 py-1 cursor-pointer">
+                        <p
+                            className={`${
+                                sizes.includes("XXL")
+                                    ? "bg-pink-100"
+                                    : "bg-slate-200"
+                            } px-3 py-1 cursor-pointer`}
+                        >
                             XXL
                         </p>
                     </div>
@@ -229,7 +293,12 @@ const Add = () => {
             </div>
 
             <div className="flex gap-2 mt-2">
-                <input type="checkbox" id="bestseller" />
+                <input
+                    onChange={() => setBestseller((prev) => !prev)}
+                    checked={bestseller}
+                    type="checkbox"
+                    id="bestseller"
+                />
                 <label className="cursor-pointer" htmlFor="bestseller">
                     Add to bestseller
                 </label>
