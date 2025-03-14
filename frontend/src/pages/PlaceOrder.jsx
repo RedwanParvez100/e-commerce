@@ -4,9 +4,22 @@ import CartTotal from "../components/CartTotal";
 import { assets } from "../assets/assets";
 import { ShopContext } from "../context/ShopContext";
 import { data } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const PlaceOrder = () => {
     const [method, setMethod] = useState("cod");
+
+    const {
+        navigate,
+        backendUrl,
+        token,
+        cartItems,
+        setCartItems,
+        getCartAmount,
+        delivery_fee,
+        products,
+    } = useContext(ShopContext);
 
     const [formData, setFormData] = useState({
         firstName: "",
@@ -23,14 +36,66 @@ const PlaceOrder = () => {
     const onChangeHandler = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-
         setFormData((data) => ({ ...data, [name]: value }));
     };
 
-    const { navigate } = useContext(ShopContext);
+    const onSubmitHandler = async (event) => {
+        event.preventDefault();
+        try {
+            let orderItems = [];
+
+            for (const items in cartItems) {
+                for (const item in cartItems[items]) {
+                    if (cartItems[items][item] > 0) {
+                        const itemInfo = structuredClone(
+                            products.find((product) => product._id === items)
+                        );
+                        if (itemInfo) {
+                            itemInfo.size = item;
+                            itemInfo.quantity = cartItems[items][item];
+                            orderItems.push(itemInfo);
+                        }
+                    }
+                }
+            }
+
+            // console.log(orderItems);
+
+            let orderData = {
+                address: formData,
+                items: orderItems,
+                amount: getCartAmount() + delivery_fee,
+            };
+
+            switch (method) {
+                // Api calls for Cash On Delivery (COD)
+                case "cod":
+                    const response = await axios.post(
+                        backendUrl + "/api/order/place",
+                        orderData,
+                        { headers: { token } }
+                    );
+                    console.log(response.data.success);
+
+                    if (response.data.success) {
+                        setCartItems({});
+                        navigate("/orders");
+                    } else {
+                        toast.error(response.data.message);
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        } catch (error) {}
+    };
 
     return (
-        <form className="flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t">
+        <form
+            onSubmit={onSubmitHandler}
+            className="flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t"
+        >
             {/* ------- Left Side -------  */}
             <div className="flex flex-col gap-4 w-full sm:max-w-[480px]">
                 <div className="text-xl sm:text-2xl my-3">
