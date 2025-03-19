@@ -75,7 +75,6 @@ const PlaceOrder = () => {
                         orderData,
                         { headers: { token } }
                     );
-                    console.log(response.data.success);
 
                     if (response.data.success) {
                         setCartItems({});
@@ -88,7 +87,10 @@ const PlaceOrder = () => {
                 default:
                     break;
             }
-        } catch (error) {}
+        } catch (error) {
+            console.log(error);
+            toast.error(error.message);
+        }
     };
 
     return (
