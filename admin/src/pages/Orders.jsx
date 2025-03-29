@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { backendUrl } from "../App";
+import { backendUrl, currency } from "../App";
 import { toast } from "react-toastify";
 import { assets } from "../assets/assets";
 
@@ -40,24 +40,68 @@ const Orders = ({ token }) => {
                     <div key={index}>
                         <img src={assets.parcel_icon} alt="" />
                         <div>
-                            {order.items.map((item, index) => {
-                                if (index === order.items.length - 1) {
-                                    return (
-                                        <p key={index}>
-                                            {item.name} x {item.quantity}
-                                            <span>{item.size}</span>
-                                        </p>
-                                    );
-                                } else {
-                                    return (
-                                        <p key={index}>
-                                            {item.name} x {item.quantity}
-                                            <span>{item.size}</span> ,
-                                        </p>
-                                    );
-                                }
-                            })}
+                            <div>
+                                {order.items.map((item, index) => {
+                                    if (index === order.items.length - 1) {
+                                        return (
+                                            <p key={index}>
+                                                {item.name} x {item.quantity}
+                                                <span>{item.size}</span>
+                                            </p>
+                                        );
+                                    } else {
+                                        return (
+                                            <p key={index}>
+                                                {item.name} x {item.quantity}
+                                                <span>{item.size}</span> ,
+                                            </p>
+                                        );
+                                    }
+                                })}
+                            </div>
+                            <p>
+                                {order.address.firstName +
+                                    " " +
+                                    order.address.lastName}
+                            </p>
+                            <div>
+                                <p>{order.address.street + ","}</p>
+                                <p>
+                                    {order.address.city +
+                                        ", " +
+                                        order.address.state +
+                                        ", " +
+                                        order.address.country +
+                                        ", " +
+                                        order.address.zipcode}
+                                </p>
+                            </div>
+                            <p>{order.address.phone}</p>
                         </div>
+                        <div>
+                            <p>Items : {order.items.length}</p>
+                            <p>Method : {order.paymentMethod}</p>
+                            <p>
+                                Payment : {order.payment ? "Done" : "Pending"}
+                            </p>
+                            <p>
+                                Date :{" "}
+                                {new Date(order.date).toLocaleDateString()}
+                            </p>
+                        </div>
+                        <p>
+                            {currency}
+                            {order.amount}
+                        </p>
+                        <select>
+                            <option value="Order Placed">Order Placed</option>
+                            <option value="Packing">Packing</option>
+                            <option value="Shipped">Shipped</option>
+                            <option value="Out for delivery">
+                                Out for delivery
+                            </option>
+                            <option value="Delivered">Delivered</option>
+                        </select>
                     </div>
                 ))}
             </div>
