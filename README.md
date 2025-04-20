@@ -27,7 +27,7 @@ A full-stack e-commerce web application built using the MERN stack – MongoDB, 
 
 ## 📁 Folders
 
-- `frontend` – React app for the main e-commerce site
-- `backend` – Node.js + Express API
-- `admin` – React app for admin dashboard
+- `frontend` – React application for the main e-commerce website
+- `backend` – Node.js and Express.js server with MongoDB integration
+- `admin` – React application for the admin dashboard
 
