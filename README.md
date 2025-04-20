@@ -8,8 +8,26 @@ This is a full-stack e-commerce web application built using the **MERN stack** (
 - ⚙️ Backend API: [https://e-commerce-backend-beta-puce.vercel.app](https://e-commerce-backend-beta-puce.vercel.app)
 - 🔐 Admin Panel: [https://e-commerce-admin.vercel.app](https://e-commerce-admin-ten-jade.vercel.app/)
 
+## 📦 Tech Stack
+
+- **Frontend**: React, React Router, Axios, Tailwind CSS
+- **Backend**: Node.js, Express.js, MongoDB, Mongoose
+- **Authentication**: JWT (JSON Web Tokens), bcryptjs
+- **Deployment**: Vercel (frontend, backend & admin panel)
+
+---
+
+## 🧾 Features
+
+- User authentication (login/register)
+- Admin login
+- Product listing and details
+- Cart and checkout functionality
+- Admin dashboard to manage products and orders
+
 ## 📁 Folders
 
 - `frontend` – React app for the main e-commerce site
-- `admin` – React app for admin dashboard
 - `backend` – Node.js + Express API
+- `admin` – React app for admin dashboard
+
