@@ -5,7 +5,7 @@ A full-stack e-commerce web application built using the MERN stack – MongoDB, 
 ## 🔗 Live Links
 
 - 🛍️ Frontend: [https://e-commerce-frontend.vercel.app](https://e-commerce-frontend-lemon-sigma.vercel.app/)
-- ⚙️ Backend API: [https://e-commerce-backend-beta-puce.vercel.app](https://e-commerce-backend-beta-puce.vercel.app)
+- ⚙️ Backend API: [https://e-commerce-backend.vercel.app](https://e-commerce-backend-beta-puce.vercel.app)
 - 🔐 Admin Panel: [https://e-commerce-admin.vercel.app](https://e-commerce-admin-ten-jade.vercel.app/)
 
 ## 📦 Tech Stack
