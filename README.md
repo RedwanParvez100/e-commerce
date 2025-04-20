@@ -1,6 +1,6 @@
 # 🛒 MERN Stack E-Commerce Project
 
-This is a full-stack e-commerce web application built using the **MERN stack** (MongoDB, Express.js, React.js, and Node.js).
+A full-stack e-commerce web application built using the MERN stack – MongoDB, Express.js, React.js, and Node.js.
 
 ## 🔗 Live Links
 
@@ -13,16 +13,16 @@ This is a full-stack e-commerce web application built using the **MERN stack** (
 - **Frontend**: React, React Router, Axios, Tailwind CSS
 - **Backend**: Node.js, Express.js, MongoDB, Mongoose
 - **Authentication**: JWT (JSON Web Tokens), bcryptjs
-- **Deployment**: Vercel (frontend, backend & admin panel)
+- **Deployment**: Vercel (for frontend, backend, and admin panel)
 
 ---
 
 ## 🧾 Features
 
-- User authentication (login/register)
-- Admin login
-- Product listing and details
-- Cart and checkout functionality
+- User registration and login
+- Admin login with protected access
+- Product listing and detail pages
+- Shopping cart and checkout
 - Admin dashboard to manage products and orders
 
 ## 📁 Folders
