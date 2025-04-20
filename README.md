@@ -1,6 +1,6 @@
-# E-Commerce Project
+# 🛒 MERN Stack E-Commerce Project
 
-This is a full-stack e-commerce web application.
+This is a full-stack e-commerce web application built using the **MERN stack** (MongoDB, Express.js, React.js, and Node.js).
 
 ## 🔗 Live Links
 
