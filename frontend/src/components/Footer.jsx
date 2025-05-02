@@ -8,11 +8,8 @@ const Footer = () => {
                 <div>
                     <img src={assets.logo} className="mb-5 w-32" alt="" />
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Cupiditate accusantium veritatis atque placeat,
-                        tempore voluptatibus corporis vitae, quasi possimus
-                        minus sint ipsam non magnam saepe fuga exercitationem
-                        officiis. Culpa, provident!
+                        We’re here to help you with great products and services.
+                        Our goal is to make your experience easy and enjoyable.
                     </p>
                 </div>
 
@@ -38,7 +35,7 @@ const Footer = () => {
             <div>
                 <hr />
                 <p className="py-5 text-sm text-center">
-                    Copyright 2025@ evernest.com - All Right Reserved.
+                    Copyright 2025©evernest.com - All Right Reserved.
                 </p>
             </div>
         </div>

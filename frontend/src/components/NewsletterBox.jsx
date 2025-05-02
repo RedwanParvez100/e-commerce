@@ -11,9 +11,9 @@ const NewsletterBox = () => {
                 Subscribe now & get 20% off
             </p>
             <p className="text-gray-400 mt-3">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti quis possimus adipisci quia nam suscipit sunt doloribus
-                labore incidunt est
+                Join our newsletter and be the first to hear about new arrivals,
+                exclusive deals, and more. Get updates on new arrivals,
+                exclusive offers, and more—straight to your inbox.
             </p>
 
             <form
