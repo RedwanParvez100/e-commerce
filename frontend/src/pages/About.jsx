@@ -18,25 +18,22 @@ const About = () => {
                 />
                 <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Obcaecati in officia totam tempore distinctio sint, id
-                        dicta deleniti odio facilis dolor eius adipisci, et
-                        blanditiis magni. Molestias repellendus fuga obcaecati!
+                        At Forever, we believe fashion should be simple,
+                        stylish, and accessible. Our goal is to bring you
+                        high-quality clothing, footwear, and accessories that
+                        fit perfectly into your everyday lifestyle.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Architecto cum ullam ipsam ipsum, molestias deserunt
-                        rerum perferendis vitae delectus facere dignissimos
-                        eligendi adipisci minima suscipit sit unde eius fugiat
-                        possimus!
+                        From cozy sweaters and jeans to chic shoes and everyday
+                        essentials, we carefully curate our collections to keep
+                        you comfortable and confident.
                     </p>
                     <b className="text-gray-800">Our Mission</b>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Inventore minima pariatur consequuntur iusto aliquam
-                        optio quidem. Dicta, enim at laudantium totam suscipit
-                        magnam animi repellendus explicabo ex ipsum temporibus
-                        ea?
+                        We aim to make online shopping easy and enjoyable for
+                        everyone. With a focus on great design, reliable
+                        quality, and affordable prices, we’re here to help you
+                        look good and feel even better—no matter the occasion.
                     </p>
                 </div>
             </div>
