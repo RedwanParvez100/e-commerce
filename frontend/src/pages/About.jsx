@@ -43,34 +43,33 @@ const About = () => {
             </div>
 
             <div className="flex flex-col md:flex-row text-sm mb-20">
-                <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
-                    <b>Quality Assurance :</b>
-                    <p className="text-gray-600">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ex explicabo, suscipit rem laboriosam facilis
-                        dolorem, harum incidunt expedita possimus voluptas
-                        molestiae autem! Vero aliquid debitis eligendi non velit
-                        nostrum at.
+                <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5 text-justify">
+                    <b className="text-lg">Quality Assurance :</b>
+                    <p className="text-gray-600 text-base">
+                        We focus on delivering top-quality products every time.
+                        Our items go through strict checks before reaching you.
+                        We use trusted materials and tested processes. Customer
+                        satisfaction is our top priority. You can rely on us for
+                        consistent, dependable quality.
                     </p>
                 </div>
-                <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
-                    <b>Convenience :</b>
-                    <p className="text-gray-600">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ex explicabo, suscipit rem laboriosam facilis
-                        dolorem, harum incidunt expedita possimus voluptas
-                        molestiae autem! Vero aliquid debitis eligendi non velit
-                        nostrum at.
+                <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5 text-justify">
+                    <b className="text-lg">Convenience :</b>
+                    <p className="text-gray-600 text-base">
+                        Shopping with us is smooth and stress-free. Our website
+                        is easy to navigate for a better experience. We offer
+                        flexible payment and delivery options. Everything you
+                        need is just a few clicks away. We save your time by
+                        making everything simple.
                     </p>
                 </div>
-                <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
-                    <b>Exceptional Customer Service :</b>
-                    <p className="text-gray-600">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ex explicabo, suscipit rem laboriosam facilis
-                        dolorem, harum incidunt expedita possimus voluptas
-                        molestiae autem! Vero aliquid debitis eligendi non velit
-                        nostrum at.
+                <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5 text-justify">
+                    <b className="text-lg">Exceptional Customer Service :</b>
+                    <p className="text-gray-600 text-base">
+                        Our support team is always ready to help. We respond
+                        quickly and solve problems fast. Your questions and
+                        concerns matter to us. We guide you through every step
+                        when needed. Great service is part of everything we do.
                     </p>
                 </div>
             </div>
