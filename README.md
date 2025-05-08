@@ -11,6 +11,7 @@ A full-stack e-commerce web application built using the MERN stack – MongoDB, 
 ## 🎨 Design (Figma)  
 [Figma UI Design Link](https://www.figma.com/design/TBe3mud1W5e0a5b3WrCcfe/Forever?node-id=0-1&t=KpS5lJnstUp7rKZ2-1)
 
+
 ## 📦 Tech Stack
 
 - **Frontend**: React, React Router, Axios, Tailwind CSS
